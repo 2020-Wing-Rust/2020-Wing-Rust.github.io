@@ -1,0 +1,6 @@
+[book]
+authors = ["KIm, Hyeonseo"]
+language = "ko"
+multilingual = false
+src = "src"
+title = "2020 Wing Rust Study"
