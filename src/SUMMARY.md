@@ -4,7 +4,7 @@
 
 - [2020 Wing Rust Study](./cover.md)
 
-# 작업환경 설정
+# 꽃게책을 펼치기 전에
 
 - [왜 Rust를 배워야 할까요? ](./ch0/welcome.md)
 - [책을 만들고 올리는 방법](./ch0/mdbook.md)
