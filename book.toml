@@ -7,7 +7,6 @@ title = "2020 Wing Rust Study"
 
 [output.html]
 mathjax-support = true
-site-url = "/mdBook/"
 git-repository-url = "https://github.com/2020-Wing-Rust/2020-Wing-Rust.github.io"
 
 [build]
