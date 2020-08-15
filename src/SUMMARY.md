@@ -6,11 +6,11 @@
 
 # 작업환경 설정
 
-- [책을 만들고 올리는 방법](./mdbook.md)
+- [책을 만들고 올리는 방법](./ch0/mdbook.md)
 
 ---
 
 # 꽃게책
 
-- [Chapter 1](./chapter_1.md)
-  - [러스트 설치하기](./install_rust.md)
+- [Chapter 1](./ch1/chapter_1.md)
+  - [러스트 설치하기](./ch1/install_rust.md)
