@@ -6,10 +6,9 @@
 
 # 꽃게책을 펼치기 전에
 
+- [Wing Rust 스터디 제안서](./ch0/proposal.md)
 - [왜 Rust를 배워야 할까요? ](./ch0/welcome.md)
 - [책을 만들고 올리는 방법](./ch0/mdbook.md)
-
----
 
 # 꽃게책
 
