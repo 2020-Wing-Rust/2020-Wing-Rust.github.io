@@ -6,11 +6,11 @@
 
 # 꽃게책을 펼치기 전에
 
-- [Wing Rust 스터디 제안서](./ch0/proposal.md)
-- [왜 Rust를 배워야 할까요? ](./ch0/welcome.md)
-- [책을 만들고 올리는 방법](./ch0/mdbook.md)
+- [Wing Rust 스터디 제안서](./foreword/proposal.md)
+- [왜 Rust를 배워야 할까요? ](./foreword/welcome.md)
+- [책을 만들고 올리는 방법](./foreword/mdbook.md)
 
-# 꽃게책
+# 꽃게책을 읽으며
 
-- [Chapter 1](./ch1/chapter_1.md)
-  - [러스트 설치하기](./ch1/install_rust.md)
+- [2020년 8월 28일](./20200828/header.md)
+  - [러스트 설치하기](./20200828/install_rust.md)
