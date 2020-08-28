@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>책을 만들고 올리는 방법 - 2020 Wing Rust Study</title>
+        <title>Wing Rust 스터디 제안서 - 2020 Wing Rust Study</title>
         
         
 
@@ -96,7 +96,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../cover.html"><strong aria-hidden="true">1.</strong> 2020 Wing Rust Study</a></li><li class="chapter-item expanded affix "><li class="part-title">꽃게책을 펼치기 전에</li><li class="chapter-item expanded "><a href="../ch0/proposal.html"><strong aria-hidden="true">2.</strong> Wing Rust 스터디 제안서</a></li><li class="chapter-item expanded "><a href="../ch0/welcome.html"><strong aria-hidden="true">3.</strong> 왜 Rust를 배워야 할까요? </a></li><li class="chapter-item expanded "><a href="../ch0/mdbook.html" class="active"><strong aria-hidden="true">4.</strong> 책을 만들고 올리는 방법</a></li><li class="chapter-item expanded affix "><li class="part-title">꽃게책</li><li class="chapter-item expanded "><a href="../ch1/chapter_1.html"><strong aria-hidden="true">5.</strong> Chapter 1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch1/install_rust.html"><strong aria-hidden="true">5.1.</strong> 러스트 설치하기</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../cover.html"><strong aria-hidden="true">1.</strong> 2020 Wing Rust Study</a></li><li class="chapter-item expanded affix "><li class="part-title">꽃게책을 펼치기 전에</li><li class="chapter-item expanded "><a href="../foreword/proposal.html" class="active"><strong aria-hidden="true">2.</strong> Wing Rust 스터디 제안서</a></li><li class="chapter-item expanded "><a href="../foreword/welcome.html"><strong aria-hidden="true">3.</strong> 왜 Rust를 배워야 할까요? </a></li><li class="chapter-item expanded "><a href="../foreword/mdbook.html"><strong aria-hidden="true">4.</strong> 책을 만들고 올리는 방법</a></li><li class="chapter-item expanded affix "><li class="part-title">꽃게책을 읽으며</li><li class="chapter-item expanded "><a href="../20200828/header.html"><strong aria-hidden="true">5.</strong> 9월 1일</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../20200828/install_rust.html"><strong aria-hidden="true">5.1.</strong> 러스트 설치하기</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -166,44 +166,92 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#책-만들기" id="책-만들기">책 만들기</a></h1>
-<h2><a class="header" href="#mdbook" id="mdbook">mdbook</a></h2>
-<p>이 프로젝트는 마크다운 형식으로 파일을 공유하고, Marp 같은 툴을 빌려서 현장에서 보여주기도 할 예정입니다. 그렇지만 Github Pages를 통한 배포를 하기 위해 정적인 사이트 형태로도 렌더링할 예정입니다. 저희가 이 렌더링 과정에서 사용할 툴이 <a href="https://github.com/rust-lang/mdBook">mdbook</a>입니다. 마크다운 파일을 기반으로 책과 비슷한 형태로 제작해줍니다. Gitbook과 같은 책의 형태로 만들어 주는 다른 플랫폼도 있고, Jekyll 같은 다른 정적 사이트 생성기를 통해서 만들 수도 있지만 Rust로 짜여있기 때문에 이 도구를 선택하게 되었습니다.</p>
-<h2><a class="header" href="#mdbook-설치" id="mdbook-설치">mdbook 설치</a></h2>
-<p>mdbook은 cargo를 통해서 손쉽게 설치가 가능합니다.</p>
-<pre><code class="language-shell">cargo install mdbook
-</code></pre>
-<h2><a class="header" href="#mdbook으로-책-만들기" id="mdbook으로-책-만들기">mdbook으로 책 만들기</a></h2>
-<h3><a class="header" href="#1목차-구성" id="1목차-구성">1.목차 구성</a></h3>
-<p><code>src/</code>에 마크다운으로 본인이 담당한 파일을 만들면, 이를 목차 정보를 담당하는 <code>SUMMARY.md</code>에도 명시를 해줘야 합니다. 탭으로 하위 챕터를 구별합니다.
-예를 들어, Chapter 1의 하위로 <code>러스트 설치하기</code>라는 제목으로 <code>install_rust.md</code>가 담고 있는 정보를 넣고 싶다면 아래와 같이 <code>SUMMARY.md</code>를 구성하면 됩니다.</p>
-<pre><code class="language-makrdown"># Summary
-
-&lt;!-- 목차를 작성하는 페이지입니다. 목차 작성도 꼭 확인해주세요. --&gt;
-
-- [Chapter 1](./chapter_1.md)
-  - [러스트 설치하기](./install_rust.md)
-</code></pre>
-<h3><a class="header" href="#2-책-만들기-및-업데이트" id="2-책-만들기-및-업데이트">2. 책 만들기 및 업데이트</a></h3>
-<p>단순히 책을 만들고 싶은 거면, 아래와 같이 입력 후 Push를 해주세요.</p>
-<pre><code class="language-shell">mdbook build
-</code></pre>
-<p>웹브라우저에서 바로 확인하고 싶다면 아래와 같이 입력하면, 빌드와 동시에 웹브라우저를 열어줍니다.</p>
-<pre><code class="language-shell">mdbook build --open
-</code></pre>
+                        <hr />
+<h2><a class="header" href="#date-2020-08-19" id="date-2020-08-19">date: 2020-08-19</a></h2>
+<h1><a class="header" href="#rust-제안서" id="rust-제안서">Rust 제안서</a></h1>
+<h2><a class="header" href="#분야" id="분야">분야</a></h2>
+<ul>
+<li>Rust</li>
+</ul>
+<h2><a class="header" href="#대상" id="대상">대상</a></h2>
+<ul>
+<li>(필수)Rust에 관심이 있는 사람 Or Rust가 왜 인기 있는지 궁금한 사람</li>
+<li>(우대) C, C++ 에서 포인터를 경험해 보신적이 있으신 분</li>
+<li>(우대) 다른 프로그래밍 언어에서 자료구조나 공부 경험이 있으신 분</li>
+</ul>
+<h2><a class="header" href="#강의-진행-방식" id="강의-진행-방식">강의 진행 방식</a></h2>
+<ul>
+<li>독서 모임 방식
+<ul>
+<li>기본적으로 책을 기반으로 진행을 할 예정임.
+<ul>
+<li>The Rust Programming Language(러스트 프로그래밍 공식 가이드)</li>
+</ul>
+</li>
+<li>어느 정도 문법이 익숙해지면 단순한 자료구조 문제를 백준에서 찾아서 해볼 생각임.</li>
+<li>책을 미리 읽게 함: 구글 드라이브 스프레드시트에 독서 상황 및 요약 기록
+<ul>
+<li>프로젝트 단원(2, 12, 20 단원)은 진행자 없이 모여서 만드는 식으로 진행될 예정</li>
+</ul>
+</li>
+<li>스터디 진행원 중 매주 한 명을 선정해서 토픽을 진행하라고 할 예정
+<ul>
+<li>사용하는 발표자료의 형식은 제한이 없으나, 확장자는  <code>.md</code> 로 해줄 것</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>코드 공유 및 소감 공유 방식
+<ul>
+<li>모임이 지나면 짧은 소감문을 작성하게  시킬 것
+<ul>
+<li>2달 or 3달 단위로 긴 소감문을 작성하게 할 것</li>
+</ul>
+</li>
+<li>소감문 및 강의 자료는 전부 다 공개된 장소에 올릴 예정입니다.
+<ul>
+<li>다른 사람에게 전달하는 것에도 어느 정도 목적이 있기 때문에 아마 팀 블로그(티스토리나 github page)로 공개할 에정입니다.</li>
+<li>저장용, 공유용 저장소/페이지를 한번에 관리할 수 있는  Github Page가 편할 것 같기는 합니다.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>진도 나가는 속도:
+<ul>
+<li>이 책은 총 12 단원으로 구성되어 있고, 한 학기는 약 3개월 정도이므로 한 주에 한 챕터 정도를 나가는 것을 목적으로 하고 싶습니다.</li>
+<li>다만 시험 기간 등 여러 요인으로 인해 초반 3 챕터 정도는 굉장히 빠르게 진행할 생각입니다.</li>
+</ul>
+</li>
+</ul>
+<h2><a class="header" href="#강의-자료" id="강의-자료">강의 자료</a></h2>
+<ul>
+<li>러스트 프로그래밍 공식 가이드(스티브 클라브닉, 캐롤 니콜스 씀/ 장현희 옮김, 제이펍)
+<ul>
+<li>이 책의 저장소는 <a href="https://github.com/rust-lang/book">rust-lang/book</a>에 소스와 영문판이 올라와 있지만, 한국어 판도 보는 것을 추천드립니다.</li>
+<li>GIST 도서관에 책을 신청했는데, 예산 없다고 거절 당했어요. 10월달에 다시 신청할 예정입니다.</li>
+</ul>
+</li>
+</ul>
+<h2><a class="header" href="#사용-도구" id="사용-도구">사용 도구</a></h2>
+<ul>
+<li>(필수) Rust와 그 안에 포함된 패키지(rustfmt, cargo)</li>
+<li>(필수) mdbook으로 정정 사이트(책) 만들기</li>
+<li>(추천) VS Code와 Rust 확장(RLS를 통한 강력한 자동완성)</li>
+<li>(추천) Marp(마크다운을 통한 슬라이드 작성, 소스코드도 쉽게 넣을 수 있습니다.)</li>
+</ul>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="../ch0/welcome.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../cover.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
 
                         
-                            <a rel="next" href="../ch1/chapter_1.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../foreword/welcome.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -215,13 +263,13 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a rel="prev" href="../ch0/welcome.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../cover.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a rel="next" href="../ch1/chapter_1.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../foreword/welcome.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
