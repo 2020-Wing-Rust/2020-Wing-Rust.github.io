@@ -98,7 +98,7 @@ Rust를 설치하는 방법은 여러 방법이 있지만, rustup이라는 도�
     "rust-analyzer.checkOnSave.overrideCommand": null,
     "rust-analyzer.debug.engine": "vadimcn.vscode-lldb",
     "rust-analyzer.rustfmt.overrideCommand": null,
-   "rust.build_lib": false,
+    "rust.build_lib": false,
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
     "editor.formatOnType": true,

@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Wing Rust 스터디 제안서 - 2020 Wing Rust Study</title>
+        <title>러스트 설치하기 - 2020 Wing Rust Study</title>
         
         
 
@@ -96,7 +96,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../cover.html"><strong aria-hidden="true">1.</strong> 2020 Wing Rust Study</a></li><li class="chapter-item expanded affix "><li class="part-title">꽃게책을 펼치기 전에</li><li class="chapter-item expanded "><a href="../foreword/proposal.html" class="active"><strong aria-hidden="true">2.</strong> Wing Rust 스터디 제안서</a></li><li class="chapter-item expanded "><a href="../foreword/welcome.html"><strong aria-hidden="true">3.</strong> 왜 Rust를 배워야 할까요? </a></li><li class="chapter-item expanded "><a href="../foreword/mdbook.html"><strong aria-hidden="true">4.</strong> 책을 만들고 올리는 방법</a></li><li class="chapter-item expanded affix "><li class="part-title">꽃게책을 읽으며</li><li class="chapter-item expanded "><a href="../20200901/header.html"><strong aria-hidden="true">5.</strong> 9월 1일</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../20200901/install_rust.html"><strong aria-hidden="true">5.1.</strong> 러스트 설치하기</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../cover.html"><strong aria-hidden="true">1.</strong> 2020 Wing Rust Study</a></li><li class="chapter-item expanded affix "><li class="part-title">꽃게책을 펼치기 전에</li><li class="chapter-item expanded "><a href="../foreword/proposal.html"><strong aria-hidden="true">2.</strong> Wing Rust 스터디 제안서</a></li><li class="chapter-item expanded "><a href="../foreword/welcome.html"><strong aria-hidden="true">3.</strong> 왜 Rust를 배워야 할까요? </a></li><li class="chapter-item expanded "><a href="../foreword/mdbook.html"><strong aria-hidden="true">4.</strong> 책을 만들고 올리는 방법</a></li><li class="chapter-item expanded affix "><li class="part-title">꽃게책을 읽으며</li><li class="chapter-item expanded "><a href="../20200901/header.html"><strong aria-hidden="true">5.</strong> 9월 1일</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../20200901/install_rust.html" class="active"><strong aria-hidden="true">5.1.</strong> 러스트 설치하기</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -167,77 +167,148 @@
                 <div id="content" class="content">
                     <main>
                         <hr />
-<h2><a class="header" href="#date-2020-08-19" id="date-2020-08-19">date: 2020-08-19</a></h2>
-<h1><a class="header" href="#rust-제안서" id="rust-제안서">Rust 제안서</a></h1>
-<h2><a class="header" href="#분야" id="분야">분야</a></h2>
+<h2><a class="header" href="#marp-true" id="marp-true">marp: true</a></h2>
+<h1><a class="header" href="#러스트-설치하기" id="러스트-설치하기">러스트 설치하기</a></h1>
+<p>2020년 9월 1일
+김현서</p>
+<hr />
+<h2><a class="header" href="#rust" id="rust">Rust</a></h2>
+<p>Rust를 설치하는 방법은 여러 방법이 있지만, rustup이라는 도구를 통해서 rust와 그와 관련된 도구를 설치할 수 있습니다. 설치는 윈도우 기준입니다.</p>
+<hr />
+<h3><a class="header" href="#1-rust-lang-install-접속" id="1-rust-lang-install-접속">1. Rust-lang install 접속</a></h3>
 <ul>
-<li>Rust</li>
+<li><a href="https://www.rust-lang.org/tools/install">https://www.rust-lang.org/tools/install</a> 접속</li>
+<li>Visual Studio C++ Build Tools 링크 클릭
+<img src="./media/install_rust_0.png" alt="rust-lang" /></li>
 </ul>
-<h2><a class="header" href="#대상" id="대상">대상</a></h2>
+<hr />
+<h3><a class="header" href="#2-visual-studio-c-build-tools-설치" id="2-visual-studio-c-build-tools-설치">2. Visual Studio C++ Build Tools 설치</a></h3>
 <ul>
-<li>(필수)Rust에 관심이 있는 사람 Or Rust가 왜 인기 있는지 궁금한 사람</li>
-<li>(우대) C, C++ 에서 포인터를 경험해 보신적이 있으신 분</li>
-<li>(우대) 다른 프로그래밍 언어에서 자료구조나 공부 경험이 있으신 분</li>
+<li>링크 클릭 : <code>vs_BuildTools.exe</code>  다운로드 후 실행</li>
+<li>이후 Visual Studio Build Tools 2019를 기본 옵션으로 설치
+<img src="./media/install_rust_1.png" alt="Build Tools" /></li>
 </ul>
-<h2><a class="header" href="#강의-진행-방식" id="강의-진행-방식">강의 진행 방식</a></h2>
+<hr />
+<h3><a class="header" href="#3-rustup-initexe-실행" id="3-rustup-initexe-실행">3. RUSTUP-INIT.EXE 실행</a></h3>
 <ul>
-<li>독서 모임 방식
-<ul>
-<li>기본적으로 책을 기반으로 진행을 할 예정임.
-<ul>
-<li>The Rust Programming Language(러스트 프로그래밍 공식 가이드)</li>
+<li><a href="https://www.rust-lang.org/tools/install">https://www.rust-lang.org/tools/install</a>로 들어와서 <strong>64비트</strong> 다운로드 후 실행
+<img src="./media/install_rust_2.png" alt="RUSTUP-INIT.EXE" /></li>
+<li>이후 default 옵션으로 설치하기 위해 1을 입력 후 실행
+<img src="./media/install_rust_3.png" alt="RUSTUP-INIT.EXE" /></li>
 </ul>
-</li>
-<li>어느 정도 문법이 익숙해지면 단순한 자료구조 문제를 백준에서 찾아서 해볼 생각임.</li>
-<li>책을 미리 읽게 함: 구글 드라이브 스프레드시트에 독서 상황 및 요약 기록
+<hr />
+<h3><a class="header" href="#5-설치-확인" id="5-설치-확인">5. 설치 확인</a></h3>
 <ul>
-<li>프로젝트 단원(2, 12, 20 단원)은 진행자 없이 모여서 만드는 식으로 진행될 예정</li>
-</ul>
-</li>
-<li>스터디 진행원 중 매주 한 명을 선정해서 토픽을 진행하라고 할 예정
-<ul>
-<li>사용하는 발표자료의 형식은 제한이 없으나, 확장자는  <code>.md</code> 로 해줄 것</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>코드 공유 및 소감 공유 방식
-<ul>
-<li>모임이 지나면 짧은 소감문을 작성하게  시킬 것
-<ul>
-<li>2달 or 3달 단위로 긴 소감문을 작성하게 할 것</li>
-</ul>
-</li>
-<li>소감문 및 강의 자료는 전부 다 공개된 장소에 올릴 예정입니다.
-<ul>
-<li>다른 사람에게 전달하는 것에도 어느 정도 목적이 있기 때문에 아마 팀 블로그(티스토리나 github page)로 공개할 에정입니다.</li>
-<li>저장용, 공유용 저장소/페이지를 한번에 관리할 수 있는  Github Page가 편할 것 같기는 합니다.</li>
-</ul>
+<li>
+<p>설치 확인을 위해서 터미널(CMD, Bash, PowerShell이든 뭐든)에서 다음 명령어를 입력합니다.</p>
+<pre><code class="language-shell">rustc --version
+</code></pre>
+<p>다음과 같은 형식으로 출력되면 성공한 것입니다.</p>
+<pre><code class="language-text">rustc x.y.z. (abcabcabcc yyyy-mm-dd)
+</code></pre>
 </li>
 </ul>
-</li>
-<li>진도 나가는 속도:
+<hr />
+<h2><a class="header" href="#텍스트-에디터-visual-studio-code-설치-및-세팅" id="텍스트-에디터-visual-studio-code-설치-및-세팅">텍스트 에디터 Visual Studio Code 설치 및 세팅</a></h2>
 <ul>
-<li>이 책은 총 12 단원으로 구성되어 있고, 한 학기는 약 3개월 정도이므로 한 주에 한 챕터 정도를 나가는 것을 목적으로 하고 싶습니다.</li>
-<li>다만 시험 기간 등 여러 요인으로 인해 초반 3 챕터 정도는 굉장히 빠르게 진행할 생각입니다.</li>
+<li>Rust를 메모장에서 공부할 수도 있고, 이 책을 따라가는 데 큰 불편함이 없을 수도 있겠지만, 그래도 편한 도구를 사용해 봅시다. Visual Studio Code는 여러 막강한 기능을 제공하는 에디터이지만 그건 스스로 찾아 보시고 여기서는 rust와 관련된 기능만 사용할 것입니다.</li>
 </ul>
-</li>
-</ul>
-<h2><a class="header" href="#강의-자료" id="강의-자료">강의 자료</a></h2>
+<hr />
+<h3><a class="header" href="#1-visual-studio-code-설치" id="1-visual-studio-code-설치">1. Visual Studio Code 설치</a></h3>
 <ul>
-<li>러스트 프로그래밍 공식 가이드(스티브 클라브닉, 캐롤 니콜스 씀/ 장현희 옮김, 제이펍)
-<ul>
-<li>이 책의 저장소는 <a href="https://github.com/rust-lang/book">rust-lang/book</a>에 소스와 영문판이 올라와 있지만, 한국어 판도 보는 것을 추천드립니다.</li>
-<li>GIST 도서관에 책을 신청했는데, 예산 없다고 거절 당했어요. 10월달에 다시 신청할 예정입니다.</li>
-</ul>
+<li>
+<p><a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a> 접속, 파일 설치 및 실행</p>
+<p><img src="./media/install_vsc_0.png" alt="VSC hompage" /></p>
 </li>
 </ul>
-<h2><a class="header" href="#사용-도구" id="사용-도구">사용 도구</a></h2>
+<hr />
+<h3><a class="header" href="#2-rust-확장-기능-설치" id="2-rust-확장-기능-설치">2. Rust 확장 기능 설치</a></h3>
 <ul>
-<li>(필수) Rust와 그 안에 포함된 패키지(rustfmt, cargo)</li>
-<li>(필수) mdbook으로 정정 사이트(책) 만들기</li>
-<li>(추천) VS Code와 Rust 확장(RLS를 통한 강력한 자동완성)</li>
-<li>(추천) Marp(마크다운을 통한 슬라이드 작성, 소스코드도 쉽게 넣을 수 있습니다.)</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=rust-lang.rust">https://marketplace.visualstudio.com/items?itemName=rust-lang.rust</a>에 들어가 install 누르기</li>
+<li>그러면 VSC에서도 그 확장 기능 창이 뜰 텐데 설치하면 됩니다.</li>
+</ul>
+<p><img src="./media/install_vsc_1.png" alt="Rust extension" /></p>
+<hr />
+<h3><a class="header" href="#3-설정-지정" id="3-설정-지정">3. 설정 지정</a></h3>
+<ul>
+<li>대부분의 설정은 GUI로 설정할 수 있는데, 몇몇 설정은 직접 파일을 수정하긴 해야합니다.</li>
+<li>그 파일을 접속하긴 위해선 윈도우 탐색기에서 <code>%appdata%/Code/User</code>에 들어가면 <code>settings.json</code>에 들어가서 편집해야합니다.</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p>그래서 파일을 미리 작성해서 여기 적어놓았습니다.</p>
+<pre><code class="language-json">{
+  &quot;[rust]&quot;: {
+    &quot;editor.defaultFormatter&quot;: &quot;rust-lang.rust&quot;,
+    &quot;editor.tabSize&quot;: 4
+  },
+  &quot;editor.insertSpaces&quot;: true,
+  &quot;rust-analyzer.checkOnSave.overrideCommand&quot;: null,
+  &quot;rust-analyzer.debug.engine&quot;: &quot;vadimcn.vscode-lldb&quot;,
+  &quot;rust-analyzer.rustfmt.overrideCommand&quot;: null,
+  &quot;rust.build_lib&quot;: false,
+  &quot;editor.formatOnPaste&quot;: true,
+  &quot;editor.formatOnSave&quot;: true,
+  &quot;editor.formatOnType&quot;: true,
+}
+</code></pre>
+</li>
+</ul>
+<hr />
+<h2><a class="header" href="#git" id="git">Git</a></h2>
+<ul>
+<li>가장 폭 넓게 쓰이는 버전관리 시스템입니다. 저희는 Github에서 제공하는 기능과 연계하여 배포용으로만 사용할 예정입니다.</li>
+</ul>
+<hr />
+<h3><a class="header" href="#git-설치" id="git-설치">Git 설치</a></h3>
+<ul>
+<li><a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a> 들어가서 설치해주세요.</li>
+</ul>
+<p><img src="./media/install_git_0.png" alt="git install" /></p>
+<ul>
+<li>Github에 가입해주세요.</li>
+</ul>
+<hr />
+<h3><a class="header" href="#기본적인-git-사용법" id="기본적인-git-사용법">기본적인 Git 사용법</a></h3>
+<h4><a class="header" href="#1ssh-키-등록" id="1ssh-키-등록">1.SSH 키 등록</a></h4>
+<ul>
+<li>Github에 기록을 올리고 내릴 때마다 인증을 하는 방법도 있지만 한 번에 진행하는 방법이 있습니다.</li>
+<li><a href="https://git-scm.com/book/ko/v2/Git-%EC%84%9C%EB%B2%84-SSH-%EA%B3%B5%EA%B0%9C%ED%82%A4-%EB%A7%8C%EB%93%A4%EA%B8%B0">https://git-scm.com/book/ko/v2/Git-%EC%84%9C%EB%B2%84-SSH-%EA%B3%B5%EA%B0%9C%ED%82%A4-%EB%A7%8C%EB%93%A4%EA%B8%B0</a></li>
+</ul>
+<hr />
+<ul>
+<li>앞의 가이드를 참고해서 키를 만든 후, Github에 등록을 해야합니다.</li>
+</ul>
+<p><img src="./media/install_git_1.png" alt="ssh key" /></p>
+<hr />
+<ul>
+<li>
+<p>저장소 (전체 폴더) 받기</p>
+<pre><code class="language-shell">git clone https://github.com/2020-Wing-Rust/2020-Wing-Rust.github.io.git
+</code></pre>
+</li>
+<li>
+<p>저희는 정말 최소한의 기능만 사용할 것이기 때문에, VS Code를 통해서 Git을 관리하도록 하겠습니다.</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>Git에서 작업을 기록하는 것을 commit, commit할 파일 목록에 올리는 것을 stage라고 합니다. vs code에서 저 버튼을 클릭하면 그 파일을 스테이징 할 수 있습니다.</li>
+<li>스테이징 시점이 기준이므로, 추가적인 수정 사항도 포함하고 싶다면 다시 stage를 눌러주세요.</li>
+<li>이후 위의 입력창에 적당히 커밋하는 내용을 요약한 후 Ctrl + Enter를 누르면 됩니다.</li>
+</ul>
+<p><img src="./media/install_git_2.png" alt="git commit" /></p>
+<hr />
+<ul>
+<li>그 이후, 동기화를 눌러주세요. 이 작업은 최신버전으로 업로드(푸쉬)와 다운로드(풀)을 동시에 진행합니다.</li>
+</ul>
+<p><img src="./media/install_git_3.png" alt="git synchro" /></p>
+<hr />
+<h3><a class="header" href="#markdown" id="markdown">Markdown</a></h3>
+<ul>
+<li>마크다운은 편하게 문서를 쓰기 위한 언어입니다. 현재 사용 중인 플랫폼도 마크다운 파일을 받아들여서 HTML 형식의 전자책으로 만드는 과정을 통해 배포되고 있습니다. 여기서는 직접적으로 문법을 안 다루겠습니다. 굳이 마크다운으로 자료를 만들 필요는 없거든요.</li>
+<li><a href="https://heropy.blog/2017/09/30/markdown/">https://heropy.blog/2017/09/30/markdown/</a></li>
 </ul>
 
                     </main>
@@ -245,15 +316,11 @@
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="../cover.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../20200901/header.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
 
-                        
-                            <a rel="next" href="../foreword/welcome.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
-                            </a>
                         
 
                         <div style="clear: both"></div>
@@ -263,15 +330,11 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a rel="prev" href="../cover.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../20200901/header.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
-                
-                    <a rel="next" href="../foreword/welcome.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
                 
             </nav>
 
