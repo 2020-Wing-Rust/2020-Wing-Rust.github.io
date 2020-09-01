@@ -9,7 +9,7 @@ marp: true
 
 ---
 
-## Rust 
+## Rust
 
 Rust를 설치하는 방법은 여러 방법이 있지만, rustup이라는 도구를 통해서 rust와 그와 관련된 도구를 설치할 수 있습니다. 설치는 윈도우 기준입니다.
 
@@ -143,6 +143,7 @@ Rust를 설치하는 방법은 여러 방법이 있지만, rustup이라는 도�
   ```shell
   git clone https://github.com/2020-Wing-Rust/2020-Wing-Rust.github.io.git
   ```
+
 - 저희는 정말 최소한의 기능만 사용할 것이기 때문에, VS Code를 통해서 Git을 관리하도록 하겠습니다.
 
 ---
