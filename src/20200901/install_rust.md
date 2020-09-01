@@ -135,6 +135,7 @@ Rust를 설치하는 방법은 여러 방법이 있지만, rustup이라는 도�
 - 앞의 가이드를 참고해서 키를 만든 후, Github에 등록을 해야합니다.
 
 ![ssh key](./media/install_git_1.png)
+테스트
 
 ---
 
