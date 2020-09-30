@@ -1,6 +1,3 @@
----
-marp: true
----
 # 열거자와 패턴 매칭
 
 2020년 10월 6일
@@ -131,7 +128,7 @@ fn try_division(dividend: i32, divisor: i32) {
 ## 참고문헌
 
 [1] P. Draper, “The worst mistake of computer science,” Lucidchart, Aug. 31, 2015. <https://www.lucidchart.com/techblog/2015/08/31/the-worst-mistake-of-computer-science/> (accessed Sep. 30, 2020).
-[2]“Option - Rust By Example.” <https://doc.rust-lang.org/rust-by-example/std/option.html> (accessed Sep. 30, 2020).
 
+[2]“Option - Rust By Example.” <https://doc.rust-lang.org/rust-by-example/std/option.html> (accessed Sep. 30, 2020).
 
 ---

@@ -1,8 +1,3 @@
----
-marp: true
-date: 2020-10-06
----
-
 # 구조체(Struct)
 
 2020년 10월 6일
@@ -136,5 +131,7 @@ impl Rectangle {
 ## 참고문헌
 
 [1] “Object composition,” Wikipedia. Sep. 21, 2020, Accessed: Sep. 28, 2020. [Online]. Available: <https://en.wikipedia.org/w/index.php?title=Object_composition&oldid=979633822>.
+
 [2] “Derive - Rust By Example.” <https://doc.rust-lang.org/stable/rust-by-example/trait/derive.html> (accessed Sep. 29, 2020).
+
 [3] Aron and K. Tugay, “java - Constructor is static or non static,” Stack Overflow, 27 2019. <https://stackoverflow.com/questions/12940421/constructor-is-static-or-non-static> (accessed Sep. 30, 2020).
