@@ -22,5 +22,5 @@
 - [9월 22일](./20200922/header.md)
   - [소유권](./20200922/main.md)
 - [10월 6일](./20201006/header.md)
-  - [구조체](./20201006/main_sturcture.md)
+  - [구조체](./20201006/main_structure.md)
   - [열거자](./20201006/main_enumerations.md)
