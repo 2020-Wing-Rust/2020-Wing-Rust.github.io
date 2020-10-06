@@ -43,14 +43,14 @@ enum IpAddr {
 
 ---
 
-## Options : Null에 대한 거의 완벽한 해결책
+## Option : Null에 대한 거의 완벽한 해결책
 
 - Null이 의미하는 값이 없는 값이라는 건 구현하다보면 피할 수 없는 존재입니다.
 - 그렇다면 이를 어떻게 해결할까요? 바로 값이 없을 수 있는 데이터를 값이 있는 경우와 아닌 경우로 나누면 됩니다.
 - 이것이 바로 Option 열거자가 필요한 이유입니다.
 
 ```rust
-enum Options<T> { //T에는 데이터 타입이 들어가며, 각 데이터 타입에 대응되는 코드를 알아서 컴파일러가 만들어 줍니다.
+enum Option<T> { //T에는 데이터 타입이 들어가며, 각 데이터 타입에 대응되는 코드를 알아서 컴파일러가 만들어 줍니다.
   Some<T>,
   None
 }
@@ -130,5 +130,3 @@ fn try_division(dividend: i32, divisor: i32) {
 [1] P. Draper, “The worst mistake of computer science,” Lucidchart, Aug. 31, 2015. <https://www.lucidchart.com/techblog/2015/08/31/the-worst-mistake-of-computer-science/> (accessed Sep. 30, 2020).
 
 [2]“Option - Rust By Example.” <https://doc.rust-lang.org/rust-by-example/std/option.html> (accessed Sep. 30, 2020).
-
----

@@ -88,7 +88,7 @@ let rect1 = Rectangle {
     height: 50,
 };
 
-println!("rect1: {:#?}", rect1);
+println!("rect1: {:?}", rect1);
 ```
 
 ---
