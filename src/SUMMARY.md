@@ -24,3 +24,4 @@
 - [10월 6일](./20201006/header.md)
   - [구조체](./20201006/main_structure.md)
   - [열거자](./20201006/main_enumerations.md)
+  - [추후 일정 논의](./20201006/record.md)
