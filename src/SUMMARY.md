@@ -25,3 +25,6 @@
   - [구조체](./20201006/main_structure.md)
   - [열거자](./20201006/main_enumerations.md)
   - [추후 일정 논의](./20201006/record.md)
+- [11월 3일](./20201103/header.md)
+  - [패키징](./20201103/main_pacakage.md)
+  - [범용 컬렉션](./20201103/main_pacakage.md)
