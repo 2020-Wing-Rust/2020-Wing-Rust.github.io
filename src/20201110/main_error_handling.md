@@ -13,4 +13,3 @@
 ![9](./media/9.png)
 ![10](./media/10.png)
 ![11](./media/11.png)
-![12](./media/12.png)
