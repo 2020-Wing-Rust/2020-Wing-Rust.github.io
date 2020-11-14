@@ -87,36 +87,65 @@ help: consider restricting type parameter `T`
 
 - 여러 타입에서 할 수 있는 특정 기능을 추상적으로 정의하기
 
+### Trait 선언하기
+
+트레이트 선언, 이름 , 그리고 타입의 행위를 정의할 메서드로 이루어짐
+
+```rust
+pub trait Summary {
+    fn summarize(&self) -> String; //{} 를 붙이는 것이 아닌 ;을 붙인다.
+}
+```
+
+```rust
+pub trait Summary {
+    fn summarize(&self) -> String {
+        return String::from("대충 요약"); //미리 기본 구현을 할 수도 있다.
+    }
+}
+```
+
+### Trait 구현하기
+
+이미 선언된 트레이트를 가져와서 구현할 수도 있습니다.  단, 외부에서 정의된 타입에 외부에서 정의된 트레이트를 구현하는 건 불가능합니다. (같은 타입에 다른 트레이트가 같은 이름으로 구현될 수 있음.)
+
+```rust
+impl 트레이트_이름 for 타입이름 {
+    fn 메서드_이름(&self) -> String {
+        //세부 구현
+    }
+}
+```
+
+### Trait와 Generic으로 함수 만들어 보기: 트레이트 매개변수
+
+특정 트레이트를 구현한 타입만 제네릭의 인자로 받을 수가 있다. → 컴파일러한테 이 타입이 가능한 행위를 알려줄 수 있다.
+
+```rust
+fn notify(item: impl Summary) {}
+
+fn notify<T: Summary>(item: T) {}
+
+fn notify<T: Summary + Clone>(item: T){}
+
+fn notify<T>(item: T)
+    where T: Summary + Clone
+{}
+```
+
+트레이트를 구현하는 타입을 리턴하는 함수를 만들 때에도 트레이트 매개변수를 활용한다. 이 때 트레이트를 구현하는 타입은 한가지만 반환이 가능하다.
+
+```rust
+fn returns_trait(switch: bool) -> impl Summary {
+    if switch {
+        NewsArticle
+    }
+    else {
+        Tweet
+    }
+}
+```
+
 ```bash
-$ cargo check
-    Checking aggregator v0.1.0 (F:\Development\Rust Wing Study\rust-programming-language\ch8\aggregator)
-error[E0308]: mismatched types
-  --> src\main.rs:40:16
-   |
-31 |   fn returns_summarizable(switch: bool) -> impl Summary {
-   |                                            ------------ expected because this return type...
-32 |       if switch {
-33 |           return NewsArticle {
-   |  ________________-
-34 | |             headline: String::from("대한민국, 독일 이기다"),
-35 | |             location: String::from("카잔 아레나, 러시아"),
-36 | |             author: String::from("위키백과"),
-37 | |             content: String::from("2:0"),
-38 | |         };
-   | |_________- ...is found to be `NewsArticle` here
-39 |       } else {
-40 |           return Tweet {
-   |  ________________^
-41 | |             username: String::from("horse_ebooks"),
-42 | |             content: String::from("러스트 공부 시작"),
-43 | |             reply: false,
-44 | |             retweet: false,
-45 | |         };
-   | |_________^ expected struct `NewsArticle`, found struct `Tweet`
-   |
    = note: to return `impl Trait`, all returned values must be of the same type
-   = note: for information on `impl Trait`, see <https://doc.rust-lang.org/book/ch10-02-traits.html#returning-types-that-implement-traits>
-   = help: you can instead return a boxed trait object using `Box<dyn Summary>`
-   = note: for information on trait objects, see <https://doc.rust-lang.org/book/ch17-02-trait-objects.html#using-trait-objects-that-allow-for-values-of-different-types>
-   = help: alternatively, create a new `enum` with a variant for each returned type
 ```
