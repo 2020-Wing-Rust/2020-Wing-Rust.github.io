@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>구조체 - 2020 Wing Rust Study</title>
+        <title>제네릭과 트레이트 - 2020 Wing Rust Study</title>
         
         
 
@@ -96,7 +96,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../cover.html"><strong aria-hidden="true">1.</strong> 2020 Wing Rust Study</a></li><li class="chapter-item expanded affix "><li class="part-title">꽃게책을 펼치기 전에</li><li class="chapter-item expanded "><a href="../foreword/proposal.html"><strong aria-hidden="true">2.</strong> Wing Rust 스터디 제안서</a></li><li class="chapter-item expanded "><a href="../foreword/welcome.html"><strong aria-hidden="true">3.</strong> 왜 Rust를 배워야 할까요? </a></li><li class="chapter-item expanded "><a href="../foreword/mdbook.html"><strong aria-hidden="true">4.</strong> 책을 만들고 올리는 방법</a></li><li class="chapter-item expanded affix "><li class="part-title">꽃게책을 읽으며</li><li class="chapter-item expanded "><a href="../20200901/header.html"><strong aria-hidden="true">5.</strong> 9월 1일</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../20200901/main.html"><strong aria-hidden="true">5.1.</strong> 러스트 설치하기</a></li><li class="chapter-item expanded "><a href="../20200901/record.html"><strong aria-hidden="true">5.2.</strong> 스터디 기록</a></li></ol></li><li class="chapter-item expanded "><a href="../20200908/header.html"><strong aria-hidden="true">6.</strong> 9월 8일</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../20200908/record.html"><strong aria-hidden="true">6.1.</strong> 일정 조율</a></li></ol></li><li class="chapter-item expanded "><a href="../20200915/header.html"><strong aria-hidden="true">7.</strong> 9월 15일</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../20200915/main.html"><strong aria-hidden="true">7.1.</strong> 보편적 프로그래밍 개념</a></li></ol></li><li class="chapter-item expanded "><a href="../20200922/header.html"><strong aria-hidden="true">8.</strong> 9월 22일</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../20200922/main.html"><strong aria-hidden="true">8.1.</strong> 소유권</a></li></ol></li><li class="chapter-item expanded "><a href="../20201006/header.html"><strong aria-hidden="true">9.</strong> 10월 6일</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../20201006/main_structure.html" class="active"><strong aria-hidden="true">9.1.</strong> 구조체</a></li><li class="chapter-item expanded "><a href="../20201006/main_enumerations.html"><strong aria-hidden="true">9.2.</strong> 열거자</a></li><li class="chapter-item expanded "><a href="../20201006/record.html"><strong aria-hidden="true">9.3.</strong> 추후 일정 논의</a></li></ol></li><li class="chapter-item expanded "><a href="../20201103/header.html"><strong aria-hidden="true">10.</strong> 11월 3일</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../20201103/main_package.html"><strong aria-hidden="true">10.1.</strong> 패키징</a></li><li class="chapter-item expanded "><a href="../20201103/main_collections.html"><strong aria-hidden="true">10.2.</strong> 범용 컬렉션</a></li></ol></li><li class="chapter-item expanded "><a href="../20201110/header.html"><strong aria-hidden="true">11.</strong> 11월 10일</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../20201110/main_error_handling.html"><strong aria-hidden="true">11.1.</strong> 에러 핸들링</a></li></ol></li><li class="chapter-item expanded "><a href="../20201117/header.html"><strong aria-hidden="true">12.</strong> 11월 17일</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../20201117/main_generic_trait.html"><strong aria-hidden="true">12.1.</strong> 제네릭과 트레이트</a></li><li class="chapter-item expanded "><a href="../20201117/main_lifetime.html"><strong aria-hidden="true">12.2.</strong> 수명</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../cover.html"><strong aria-hidden="true">1.</strong> 2020 Wing Rust Study</a></li><li class="chapter-item expanded affix "><li class="part-title">꽃게책을 펼치기 전에</li><li class="chapter-item expanded "><a href="../foreword/proposal.html"><strong aria-hidden="true">2.</strong> Wing Rust 스터디 제안서</a></li><li class="chapter-item expanded "><a href="../foreword/welcome.html"><strong aria-hidden="true">3.</strong> 왜 Rust를 배워야 할까요? </a></li><li class="chapter-item expanded "><a href="../foreword/mdbook.html"><strong aria-hidden="true">4.</strong> 책을 만들고 올리는 방법</a></li><li class="chapter-item expanded affix "><li class="part-title">꽃게책을 읽으며</li><li class="chapter-item expanded "><a href="../20200901/header.html"><strong aria-hidden="true">5.</strong> 9월 1일</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../20200901/main.html"><strong aria-hidden="true">5.1.</strong> 러스트 설치하기</a></li><li class="chapter-item expanded "><a href="../20200901/record.html"><strong aria-hidden="true">5.2.</strong> 스터디 기록</a></li></ol></li><li class="chapter-item expanded "><a href="../20200908/header.html"><strong aria-hidden="true">6.</strong> 9월 8일</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../20200908/record.html"><strong aria-hidden="true">6.1.</strong> 일정 조율</a></li></ol></li><li class="chapter-item expanded "><a href="../20200915/header.html"><strong aria-hidden="true">7.</strong> 9월 15일</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../20200915/main.html"><strong aria-hidden="true">7.1.</strong> 보편적 프로그래밍 개념</a></li></ol></li><li class="chapter-item expanded "><a href="../20200922/header.html"><strong aria-hidden="true">8.</strong> 9월 22일</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../20200922/main.html"><strong aria-hidden="true">8.1.</strong> 소유권</a></li></ol></li><li class="chapter-item expanded "><a href="../20201006/header.html"><strong aria-hidden="true">9.</strong> 10월 6일</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../20201006/main_structure.html"><strong aria-hidden="true">9.1.</strong> 구조체</a></li><li class="chapter-item expanded "><a href="../20201006/main_enumerations.html"><strong aria-hidden="true">9.2.</strong> 열거자</a></li><li class="chapter-item expanded "><a href="../20201006/record.html"><strong aria-hidden="true">9.3.</strong> 추후 일정 논의</a></li></ol></li><li class="chapter-item expanded "><a href="../20201103/header.html"><strong aria-hidden="true">10.</strong> 11월 3일</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../20201103/main_package.html"><strong aria-hidden="true">10.1.</strong> 패키징</a></li><li class="chapter-item expanded "><a href="../20201103/main_collections.html"><strong aria-hidden="true">10.2.</strong> 범용 컬렉션</a></li></ol></li><li class="chapter-item expanded "><a href="../20201110/header.html"><strong aria-hidden="true">11.</strong> 11월 10일</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../20201110/main_error_handling.html"><strong aria-hidden="true">11.1.</strong> 에러 핸들링</a></li></ol></li><li class="chapter-item expanded "><a href="../20201117/header.html"><strong aria-hidden="true">12.</strong> 11월 17일</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../20201117/main_generic_trait.html" class="active"><strong aria-hidden="true">12.1.</strong> 제네릭과 트레이트</a></li><li class="chapter-item expanded "><a href="../20201117/main_lifetime.html"><strong aria-hidden="true">12.2.</strong> 수명</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -166,161 +166,171 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#구조체struct" id="구조체struct">구조체(Struct)</a></h1>
-<p>2020년 10월 6일</p>
-<hr />
-<h2><a class="header" href="#구조체란" id="구조체란">구조체란?</a></h2>
-<ul>
-<li>Object Composition의 일종 [1]
-<ul>
-<li>원시 데이터 타입을 묶어서 새로운 데이터 타입으로 라벨링 하는 것</li>
-<li>여기서 상속과 함수(메쏘드)를 포함하도록 만들어서 객체 지향 언어의 객체라는 개념을 만듬</li>
-</ul>
-</li>
-<li>Rust의 구조체는 상속은 없지만 메쏘드를 선언할 수 있고, 생성자를 만들 수 있는 것과 같이 객체 지향 언어의 객체와 굉장히 비슷한 특징을 가짐.</li>
-</ul>
-<hr />
-<h2><a class="header" href="#구조체의-정의" id="구조체의-정의">구조체의 정의</a></h2>
-<ul>
-<li>구조체의 선언에는 구조체의 이름, 필드의 이름과 타입을 나열해야 한다.</li>
-</ul>
+                        <h1><a class="header" href="#제네릭과-트레이트" id="제네릭과-트레이트">제네릭과 트레이트</a></h1>
+<h2><a class="header" href="#generic" id="generic">Generic</a></h2>
 <pre><pre class="playground"><code class="language-rust">
 <span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
-</span>struct User {
-    username: String,
-    email: String,
-    sign_in_count: u64,
-    active: bool
-}
-<span class="boring">}
-</span></code></pre></pre>
-<ul>
-<li>Tuple struct : 필드의 이름이 없는 튜플을 통해서도 구조체를 만들 수 있다.</li>
-</ul>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
-</span><span class="boring">fn main() {
-</span>struct Color(i32, i32, i32);
-<span class="boring">}
-</span></code></pre></pre>
-<hr />
-<h2><a class="header" href="#구조체-인스턴스의-생성과-이용" id="구조체-인스턴스의-생성과-이용">구조체 인스턴스의 생성과 이용</a></h2>
-<ul>
-<li>인스턴스 : 어떤 설계도(클래스, 생성자, 구조체 등)을 통해 만들어지는 대상</li>
-</ul>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
-</span><span class="boring">fn main() {
-</span>let some_color = Color(0, 0, 0);
-let user_1 = User{
-    username: String::from(&quot;hello&quot;),
-    email:String::from(&quot;hello&quot;),
-    sign_in_count: 0,
-    active: false
-};
+</span>fn largest_i32(list: &amp;[i32]) -&gt; i32 {
+    let mut largest = list[0];
 
-println!(&quot;{}&quot;, some_clor.1); // 0
-println!(&quot;{}&quot;, user_1.username) // hello
-<span class="boring">}
-</span></code></pre></pre>
-<hr />
-<h2><a class="header" href="#구조체-인스턴스를-반환하는-함수" id="구조체-인스턴스를-반환하는-함수">구조체 인스턴스를 반환하는 함수</a></h2>
-<ul>
-<li>구조체를 반환하는 함수를 만들 수 있다.</li>
-</ul>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
-</span><span class="boring">fn main() {
-</span>fn make_user(email: String, username: String) -&gt; User {
-    return User {
-      username,
-      email,
-      sign_in_count: 0,
-      active: false
-    }
-}
-<span class="boring">}
-</span></code></pre></pre>
-<hr />
-<h2><a class="header" href="#derive-어노테이션으로-디버깅-하기" id="derive-어노테이션으로-디버깅-하기">derive 어노테이션으로 디버깅 하기</a></h2>
-<ul>
-<li><code>#[derive]</code> attribute를 통해, 우리는 이미 기본적으로 구현된 몇몇 trait을 사용할 수 있게 해줌.</li>
-<li>그 중 하나가 <code>{:?}</code>를 통해 값을 포맷팅 할 수 있게 해주는 Debug [2]</li>
-<li>기본적으로 Display를 구현하지 않더라도 출력할 수 있게 해줌</li>
-</ul>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
-</span><span class="boring">fn main() {
-</span>#[derive(Debug)]
-struct Rectangle {
-    width: u32,
-    height: u32,
-}
-
-let rect1 = Rectangle {
-    width: 30,
-    height: 50,
-};
-
-println!(&quot;rect1: {:?}&quot;, rect1);
-<span class="boring">}
-</span></code></pre></pre>
-<hr />
-<h2><a class="header" href="#메쏘드" id="메쏘드">메쏘드</a></h2>
-<ul>
-<li>그 객체 인스턴스와 그 데이터에 접근 가능한 서브루틴 : 함수와 유사하다.</li>
-<li><code>&amp;self</code>인자를 통해 접근 가능하며, 이 외에도 다른 매개변수를 받을 수 있다.</li>
-<li>위의 <code>Rectangle</code> 구조체의 넓이를 구하는 메쏘드를 구현해보자.</li>
-</ul>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
-</span><span class="boring">fn main() {
-</span>impl Rectangle {
-    fn get_area(&amp;self) -&gt; u32{ //&amp;self를 인자로 인스턴스와 그 데이터에 접근한다.
-      self.width * self.height
-    }
-}
-<span class="boring">}
-</span></code></pre></pre>
-<hr />
-<h2><a class="header" href="#연관-함수" id="연관-함수">연관 함수</a></h2>
-<ul>
-<li>메쏘드와 유사하나, 인스턴스와 데이터에 접근하지 않는 함수(== <code>&amp;self</code>를 인자로 가지지 않는 함수)</li>
-<li>생성자(새로운 인스턴스를 리턴하는 함수)를 만드는 데 주로 사용됨.</li>
-<li>객체 지향 언어의 정적 메소드와 비슷한 개념(단, 일반적으로 생성자는 정적 메소드가 아님.) [3]</li>
-</ul>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
-</span><span class="boring">fn main() {
-</span>impl Rectangle {
-    fn square(size: u32) -&gt; Rectangle {
-        Rectangle {
-            width: size,
-            height: size,
+    for &amp;item in list.iter() {
+        if item &gt; largest {
+            largest = item;
         }
     }
+
+    return largest;
 }
 <span class="boring">}
 </span></code></pre></pre>
-<hr />
-<h2><a class="header" href="#참고문헌" id="참고문헌">참고문헌</a></h2>
-<p>[1] “Object composition,” Wikipedia. Sep. 21, 2020, Accessed: Sep. 28, 2020. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Object_composition&amp;oldid=979633822">https://en.wikipedia.org/w/index.php?title=Object_composition&amp;oldid=979633822</a>.</p>
-<p>[2] “Derive - Rust By Example.” <a href="https://doc.rust-lang.org/stable/rust-by-example/trait/derive.html">https://doc.rust-lang.org/stable/rust-by-example/trait/derive.html</a> (accessed Sep. 29, 2020).</p>
-<p>[3] Aron and K. Tugay, “java - Constructor is static or non static,” Stack Overflow, 27 2019. <a href="https://stackoverflow.com/questions/12940421/constructor-is-static-or-non-static">https://stackoverflow.com/questions/12940421/constructor-is-static-or-non-static</a> (accessed Sep. 30, 2020).</p>
+<p>→ 여기서 타입(<code>i32</code>)와 이름(<code>largest_i32</code>)만 바꾸면 다른 타입에서도 쓸 수 있지 않을까?</p>
+<ul>
+<li>타입 정보를 매개 변수로 전달하여, 개발자가 작성하는 코드의 반복을 줄이자.</li>
+<li>일반적으로, 타입 정보를 담고있는 변수를 <code>T</code>로 표시(<code>Type</code>)</li>
+<li>컴파일러에서 자동으로 각 타입에 해당되는 코드를 만들어서 그 것을 컴파일 한다.</li>
+<li>함수, 열거자, 구조체, 메서드에서도 사용할 수 있다.</li>
+</ul>
+<h3><a class="header" href="#제네릭을-적용한-함수" id="제네릭을-적용한-함수">제네릭을 적용한 함수</a></h3>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn largest&lt;T&gt;(list: &amp;[T]) -&gt; T
+{
+    let mut largest = list[0];
+
+    for &amp;item in list.iter() {
+        if item &gt; largest {
+            largest = item;
+        }
+    }
+
+    return largest;
+}
+<span class="boring">}
+</span></code></pre></pre>
+<h3><a class="header" href="#제네릭을-이용한-구조체와-메서드" id="제네릭을-이용한-구조체와-메서드">제네릭을 이용한 구조체와 메서드</a></h3>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>struct Point&lt;T&gt; {
+    x: T,
+    y : T,
+}
+
+impl&lt;T&gt; Point&lt;T&gt; { //제네릭으로 T 타입 매개변수를 받음을 명시해야 한다.fn
+    fn x(&amp;self) -&gt; &amp;T {
+        return &amp;self.x;
+    }
+}
+
+impl Point&lt;f32&gt; { //특정 타입일 때만 적용되는 메서드
+    fn distance_from_origin(&amp;self) -&gt; f32 {
+        return (self.x.powi(2) + self.y.powi(2)).sqrt();
+    }
+}
+
+<span class="boring">}
+</span></code></pre></pre>
+<h3><a class="header" href="#특정-기능이-없는-타입이-제네릭에-들어가는-경우" id="특정-기능이-없는-타입이-제네릭에-들어가는-경우">특정 기능이 없는 타입이 제네릭에 들어가는 경우</a></h3>
+<ul>
+<li><code>T</code>가 구현된 기능을 지원하지 않는 타입일 수도 있다.</li>
+<li>실제로도 <code>largest</code> 함수는 컴파일 에러가 발생한다.</li>
+</ul>
+<pre><code class="language-bash">   Compiling aggregator v0.1.0 (F:\Development\Rust Wing Study\rust-programming-language\ch8\aggregator)
+error[E0369]: binary operation `&gt;` cannot be applied to type `T`
+  --&gt; src\main.rs:56:17
+   |
+56 |         if item &gt; largest {
+   |            ---- ^ ------- T
+   |            |
+   |            T
+   |
+help: consider restricting type parameter `T`
+   |
+</code></pre>
+<p>특정 기능이 구현되어 있는 지 어떻게 컴파일러에게 알려줄 것인가?</p>
+<h2><a class="header" href="#trait" id="trait">Trait</a></h2>
+<ul>
+<li>여러 타입에서 할 수 있는 특정 기능을 추상적으로 정의하기</li>
+</ul>
+<h3><a class="header" href="#trait-선언하기" id="trait-선언하기">Trait 선언하기</a></h3>
+<p>트레이트 선언, 이름 , 그리고 타입의 행위를 정의할 메서드로 이루어짐</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>pub trait Summary {
+    fn summarize(&amp;self) -&gt; String; //{} 를 붙이는 것이 아닌 ;을 붙인다.
+}
+<span class="boring">}
+</span></code></pre></pre>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>pub trait Summary {
+    fn summarize(&amp;self) -&gt; String {
+        return String::from(&quot;대충 요약&quot;); //미리 기본 구현을 할 수도 있다.
+    }
+}
+<span class="boring">}
+</span></code></pre></pre>
+<h3><a class="header" href="#trait-구현하기" id="trait-구현하기">Trait 구현하기</a></h3>
+<p>이미 선언된 트레이트를 가져와서 구현할 수도 있습니다.  단, 외부에서 정의된 타입에 외부에서 정의된 트레이트를 구현하는 건 불가능합니다. (같은 타입에 다른 트레이트가 같은 이름으로 구현될 수 있음.)</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>impl 트레이트_이름 for 타입이름 {
+    fn 메서드_이름(&amp;self) -&gt; String {
+        //세부 구현
+    }
+}
+<span class="boring">}
+</span></code></pre></pre>
+<h3><a class="header" href="#trait와-generic으로-함수-만들어-보기-트레이트-매개변수" id="trait와-generic으로-함수-만들어-보기-트레이트-매개변수">Trait와 Generic으로 함수 만들어 보기: 트레이트 매개변수</a></h3>
+<p>특정 트레이트를 구현한 타입만 제네릭의 인자로 받을 수가 있다. → 컴파일러한테 이 타입이 가능한 행위를 알려줄 수 있다.</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn notify(item: impl Summary) {}
+
+fn notify&lt;T: Summary&gt;(item: T) {}
+
+fn notify&lt;T: Summary + Clone&gt;(item: T){}
+
+fn notify&lt;T&gt;(item: T)
+    where T: Summary + Clone
+{}
+<span class="boring">}
+</span></code></pre></pre>
+<p>트레이트를 구현하는 타입을 리턴하는 함수를 만들 때에도 트레이트 매개변수를 활용한다. 이 때 트레이트를 구현하는 타입은 한가지만 반환이 가능하다.</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn returns_trait(switch: bool) -&gt; impl Summary {
+    if switch {
+        NewsArticle
+    }
+    else {
+        Tweet
+    }
+}
+<span class="boring">}
+</span></code></pre></pre>
+<pre><code class="language-bash">   = note: to return `impl Trait`, all returned values must be of the same type
+</code></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="../20201006/header.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../20201117/header.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
 
                         
-                            <a rel="next" href="../20201006/main_enumerations.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../20201117/main_lifetime.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -332,13 +342,13 @@ println!(&quot;rect1: {:?}&quot;, rect1);
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a rel="prev" href="../20201006/header.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../20201117/header.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a rel="next" href="../20201006/main_enumerations.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../20201117/main_lifetime.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
