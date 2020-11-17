@@ -30,3 +30,6 @@
   - [범용 컬렉션](./20201103/main_collections.md)
 - [11월 10일](./20201110/header.md)
   - [에러 핸들링](./20201110/main_error_handling.md)
+- [11월 17일](./20201117/header.md)
+  - [제네릭과 트레이트](./20201117/main_generic_trait.md)
+  - [수명](./20201117/main_lifetime.md)
